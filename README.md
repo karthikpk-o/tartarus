@@ -1,4 +1,4 @@
-# Dungeon Adventure Game
+# Tartarus
 
 ![Game Logo](path/to/logo.png) 
 
@@ -13,7 +13,7 @@
 - [License](#license)
 
 ## About the Game
-Dungeon Adventure is an exciting platformer game inspired by Dangerous Dave. Navigate through dungeons, avoid enemies, and collect coins to achieve the highest score.
+Tartarus is an exciting platformer game inspired by Dangerous Dave. Navigate through dungeons, avoid enemies, and collect coins to achieve the highest score.
 
 ## Game Screenshots
 ![Screenshot 1](path/to/screenshot1.png)
