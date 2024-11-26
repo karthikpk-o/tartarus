@@ -7,23 +7,23 @@ HEIGHT = 750
 SCREEN = pygame.display.set_mode((1550, 750))
 pygame.display.set_caption("Menu")
 
-BG = pygame.image.load("assets/Background.png")
+BG = pygame.image.load("./assets/background.png")
 BG = pygame.transform.scale(BG, (WIDTH,HEIGHT))
 BG_RECT = BG.get_rect()
-GUY = pygame.image.load(os.path.join('ASSETS', 'guy1.png'))
+GUY = pygame.image.load(os.path.join('./assets', 'guy1.png'))
 GUY = pygame.transform.scale(GUY,(30, 40))
-E2 = pygame.image.load(os.path.join('ASSETS', 'enemy2.png'))
+E2 = pygame.image.load(os.path.join('./assets', 'enemy2.png'))
 E2 = pygame.transform.scale(E2,(30, 40))
-E1 = pygame.image.load(os.path.join('ASSETS', 'enemy1.png'))
+E1 = pygame.image.load(os.path.join('./assets', 'enemy1.png'))
 E1 = pygame.transform.scale(E1,(30, 40))
-COIN = pygame.image.load(os.path.join('ASSETS', 'coin.png'))
+COIN = pygame.image.load(os.path.join('./assets', 'coin.png'))
 COIN = pygame.transform.scale(COIN,(30, 40))
-TRS = pygame.image.load(os.path.join('ASSETS', 'treasure1.png'))
+TRS = pygame.image.load(os.path.join('./assets', 'treasure1.png'))
 TRS = pygame.transform.scale(TRS,(30, 40))
 
-play_img = pygame.image.load('assets/Play Rect.png')
-options_img = pygame.image.load('assets/Options Rect.png')
-quit_img = pygame.image.load('assets/Quit Rect.png')
+play_img = pygame.image.load('./assets/Play Rect.png')
+options_img = pygame.image.load('./assets/Options Rect.png')
+quit_img = pygame.image.load('./assets/Quit Rect.png')
 
 class Button():
 	def __init__(self, image, pos, text_input, font, base_color, hovering_color):
@@ -57,7 +57,7 @@ class Button():
 
 
 def get_font(size): 
-    return pygame.font.Font("assets/font.ttf", size)
+    return pygame.font.Font("./assets/font.ttf", size)
 
 def play():
     import game

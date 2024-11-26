@@ -35,27 +35,27 @@ high_score = 0
 count = 0
 Time = 90
 
-restart_img = pygame.image.load(os.path.join('ASSETS','restart.png'))
-pause_img = pygame.image.load(os.path.join('ASSETS','pause.png'))
+restart_img = pygame.image.load(os.path.join('./assets','restart.png'))
+pause_img = pygame.image.load(os.path.join('./assets','pause.png'))
 pause_img = pygame.transform.scale(pause_img, (100,100))
-menu_img = pygame.image.load(os.path.join('ASSETS','menu.png'))
+menu_img = pygame.image.load(os.path.join('./assets','menu.png'))
 menu_img = pygame.transform.scale(menu_img, (150,100))
-playagain_img = pygame.image.load(os.path.join('ASSETS','playagain.png'))
+playagain_img = pygame.image.load(os.path.join('./assets','playagain.png'))
 playagain_img = pygame.transform.scale(playagain_img, (200,130))
-gameover_img=pygame.image.load(os.path.join('ASSETS','game over.png'))
+gameover_img=pygame.image.load(os.path.join('./assets','game over.png'))
 gameover_img=pygame.transform.scale(gameover_img, (WIDTH,HEIGHT))
 gameover_rect=gameover_img.get_rect()
-map_img = pygame.image.load(os.path.join('ASSETS', 'map.png'))
+map_img = pygame.image.load(os.path.join('./assets', 'map.png'))
 map_img = pygame.transform.scale(map_img, (500,750))
 map_rect = map_img.get_rect()
-timer_img = pygame.image.load(os.path.join('ASSETS','timer.png'))
+timer_img = pygame.image.load(os.path.join('./assets','timer.png'))
 timer_img = pygame.transform.scale(timer_img, (300,100))
 
-pygame.mixer.music.load(os.path.join('ASSETS','music.wav'))
+pygame.mixer.music.load(os.path.join('./assets','music.wav'))
 pygame.mixer.music.play(-1, 0.0, 5000)
-coin_fx = pygame.mixer.Sound(os.path.join('ASSETS','coin.wav'))
+coin_fx = pygame.mixer.Sound(os.path.join('./assets','coin.wav'))
 coin_fx.set_volume(0.5)
-game_over_fx = pygame.mixer.Sound(os.path.join('ASSETS','game_over.wav'))
+game_over_fx = pygame.mixer.Sound(os.path.join('./assets','game_over.wav'))
 game_over_fx.set_volume(0.5)
 
 def draw_text(text, font, text_col, x, y):
@@ -185,12 +185,12 @@ class Player():
         self.index = 0
         self.counter = 0
         for num in range(1, 5):
-            img_right = pygame.image.load(f'ASSETS/guy{num}.png')
+            img_right = pygame.image.load(f'./assets/guy{num}.png')
             img_right = pygame.transform.scale(img_right, (28, 28))
             img_left = pygame.transform.flip(img_right, True, False)
             self.images_right.append(img_right)
             self.images_left.append(img_left)
-        dead_image = pygame.image.load(os.path.join('ASSETS', 'dead.png'))
+        dead_image = pygame.image.load(os.path.join('./assets', 'dead.png'))
         self.dead_image = pygame.transform.scale(dead_image, (30, 30))
         self.image = self.images_right[self.index]
         self.rect = self.image.get_rect()
@@ -203,7 +203,7 @@ class Player():
 class World():
     def __init__(self, data):
         self.tile_list = []
-        wall_img = pygame.image.load(os.path.join('ASSETS', 'cobblestone.png'))
+        wall_img = pygame.image.load(os.path.join('./assets', 'cobblestone.png'))
         row_count = 0
         for row in data:
             col_count = 0
@@ -245,7 +245,7 @@ class World():
 class Enemy1(pygame.sprite.Sprite):
     def __init__(self, x, y):
         pygame.sprite.Sprite.__init__(self)
-        img = pygame.image.load(os.path.join('ASSETS', 'enemy2.png'))
+        img = pygame.image.load(os.path.join('./assets', 'enemy2.png'))
         self.image = pygame.transform.scale(img, (28, 28))
         self.rect = self.image.get_rect()
         self.width = self.image.get_width()
@@ -271,7 +271,7 @@ class Enemy1(pygame.sprite.Sprite):
 class Enemy2(pygame.sprite.Sprite):
     def __init__(self, x, y):
         pygame.sprite.Sprite.__init__(self)
-        img = pygame.image.load(os.path.join('ASSETS', 'enemy1.png'))
+        img = pygame.image.load(os.path.join('./assets', 'enemy1.png'))
         self.image = pygame.transform.scale(img, (28, 28))
         self.rect = self.image.get_rect()
         self.width = self.image.get_width()
@@ -296,7 +296,7 @@ class Enemy2(pygame.sprite.Sprite):
 class Life(pygame.sprite.Sprite):
     def __init__(self, x, y):
         pygame.sprite.Sprite.__init__(self)
-        img = pygame.image.load(os.path.join('ASSETS','life.png'))
+        img = pygame.image.load(os.path.join('./assets','life.png'))
         self.image = pygame.transform.scale(img, (tile_size, tile_size))
         self.rect = self.image.get_rect()
         self.rect.center = (x, y+20)
@@ -304,7 +304,7 @@ class Life(pygame.sprite.Sprite):
 class Coin(pygame.sprite.Sprite):
     def __init__(self, x, y):
         pygame.sprite.Sprite.__init__(self)
-        img = pygame.image.load(os.path.join('ASSETS', 'coin.png'))
+        img = pygame.image.load(os.path.join('./assets', 'coin.png'))
         self.image = pygame.transform.scale(img, (18, 18))
         self.rect = self.image.get_rect()
         self.rect.center = (x, y)
@@ -312,7 +312,7 @@ class Coin(pygame.sprite.Sprite):
 class Treasure(pygame.sprite.Sprite):
     def __init__(self, x, y):
         pygame.sprite.Sprite.__init__(self)
-        img = pygame.image.load(os.path.join('ASSETS', 'treasure1.png'))
+        img = pygame.image.load(os.path.join('./assets', 'treasure1.png'))
         self.image = pygame.transform.scale(img, (28, 28))
         self.rect = self.image.get_rect()
         self.rect.x = x
@@ -321,7 +321,7 @@ class Treasure(pygame.sprite.Sprite):
 class Exit(pygame.sprite.Sprite):
     def __init__(self, x, y):
         pygame.sprite.Sprite.__init__(self)
-        img = pygame.image.load(os.path.join('ASSETS', 'door.png'))
+        img = pygame.image.load(os.path.join('./assets', 'door.png'))
         self.image = pygame.transform.scale(img, (28, 28))
         self.rect = self.image.get_rect()
         self.rect.x = x
@@ -330,7 +330,7 @@ class Exit(pygame.sprite.Sprite):
 class Portal(pygame.sprite.Sprite):
     def __init__(self, x, y):
         pygame.sprite.Sprite.__init__(self)
-        img = pygame.image.load(os.path.join('ASSETS', 'portal2.png'))
+        img = pygame.image.load(os.path.join('./assets', 'portal2.png'))
         self.image = pygame.transform.scale(img, (28, 28))
         self.rect = self.image.get_rect()
         self.rect.x = x
