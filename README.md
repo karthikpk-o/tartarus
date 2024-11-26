@@ -16,27 +16,27 @@
 Tartarus is an exciting platformer game inspired by Dangerous Dave. Navigate through dungeons, avoid enemies, and collect coins to achieve the highest score.
 
 ## Game Screenshots
-![Screenshot 1](path/to/screenshot1.png)
-![Screenshot 2](path/to/screenshot2.png)
-![Screenshot 3](path/to/screenshot3.png)
+![Screenshot 1](./assets/preview/main_menu.png)
+![Screenshot 2](./assets/preview/instructions.png)
+![Screenshot 3](./assets/preview/game.png)
 
 ## Installation
 To run this game locally, follow these steps:
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/dungeon-adventure.git
-    cd dungeon-adventure
+    git clone https://github.com/karthikpk-o/tartarus.git
+    cd tartarus
     ```
 
 2. **Install dependencies:**
     ```bash
-    pip install -r requirements.txt
+    pip install pygame
     ```
 
 3. **Run the game:**
     ```bash
-    python main.py
+    python main_menu.py
     ```
 
 ## How to Play
