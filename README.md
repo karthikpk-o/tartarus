@@ -3,7 +3,7 @@
 ## About the Game
 Tartarus is an exciting platformer game inspired by Dangerous Dave. Navigate through dungeons, avoid enemies, and collect coins to achieve the highest score.
 
-## Game Screenshots
+## Game Preview
 ![Screenshot 1](./assets/preview/main_menu.png)
 ![Screenshot 2](./assets/preview/instructions.png)
 ![Screenshot 3](./assets/preview/game.png)
