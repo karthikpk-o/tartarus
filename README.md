@@ -1,17 +1,5 @@
 # Tartarus
 
-![Game Logo](path/to/logo.png) 
-
-## Table of Contents
-- [About the Game](#about-the-game)
-- [Game Screenshots](#game-screenshots)
-- [Installation](#installation)
-- [How to Play](#how-to-play)
-- [Controls](#controls)
-- [Development](#development)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## About the Game
 Tartarus is an exciting platformer game inspired by Dangerous Dave. Navigate through dungeons, avoid enemies, and collect coins to achieve the highest score.
 
@@ -54,9 +42,4 @@ This game was developed using Python and Pygame. Sprites and other assets were u
 ## Contributing
 Contributions are welcome! Feel free to submit a pull request or open an issue to suggest improvements.
 
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 ---
-
-Feel free to adjust the sections and add more details as needed! Here's to a fantastic game launch! 🌟
